@@ -3,6 +3,12 @@
 @tailwind utilities;
 
 .title{
-  @apply font-heebo
+  @apply font-museo
 }
 
+.fill-purple{
+  background-color: #9000FF;
+}
+.fill-green{
+  background-color: #79FDAE;
+}

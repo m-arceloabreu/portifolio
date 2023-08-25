@@ -6,9 +6,15 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    colors:{
+      'primary': '#9000FF',
+      'secondary': '#79FDAE',
+      'white': '#fff',
+      'black': '#000000'
+    },
     extend: {
       fontFamily:{
-        heebo:['var(--font-heebo-bolder)'],
+        museo:['var(--font-museo-bolder)'],
         lato:['var(--font-lato)']
       }
     },

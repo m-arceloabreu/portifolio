@@ -1,11 +1,11 @@
 import './globals.css'
-import {Heebo, Lato} from 'next/font/google';
+import {Heebo, Lato, MuseoModerno} from 'next/font/google';
 
 
-const heebo = Heebo({
+const museo = MuseoModerno({
   subsets:['latin'],
   weight:'700',
-  variable: '--font-heebo-bolder'
+  variable: '--font-museo-bolder'
 });
 const lato = Lato({
   subsets:['latin'],
@@ -21,7 +21,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${heebo.variable} ${lato.variable}`}>
+      <body className={`${museo.variable} ${lato.variable}`}>
         {children}
         </body>
     </html>

@@ -3,9 +3,21 @@ import React, {useState, useEffect} from "react";
 import './layout.css'
 import Image from "next/image";
 import imageBg from 'public/purple-black-background.jpg';
+import { About } from "./about/About";
+
 export default function Layout({ children }) {
 
-  const [sticky, setSticky] = useState();
+  const [active, setActive] = useState('');
+
+  const handleActive = event => {
+    if(active != 'active'){
+    setActive('active');
+    }else{
+      setActive('');
+    }
+  }
+
+   
 
   useEffect(() => {
     window.addEventListener('scroll',function(){
@@ -25,7 +37,10 @@ export default function Layout({ children }) {
                 src={imageBg}
                 alt="Purple smoke"
               />
-          <nav>
+              <div
+                onClick={handleActive}
+                className={`toggle ${active}`}></div>
+          <nav className={`${active}`}>
             <ul>
               <li><a>Home</a></li>
               <li><a>About</a></li>
@@ -35,7 +50,8 @@ export default function Layout({ children }) {
             </ul>
           </nav>
         </header>
-        <div className="text-[800px]">
+        <div id='body' className="text-[10] mt-[20vh]">
+          <About/>
           <p>A</p>
           <p>A</p>
           <p>A</p>
